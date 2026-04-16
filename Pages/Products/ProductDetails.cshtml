@@ -1,0 +1,32 @@
+﻿@page
+@model SportsStore2_2026.Pages.Products.ProductDetailsModel
+@{
+}
+
+<div class="row justify-content-center">
+
+	<div class="card col-md-8 p-3">
+
+		<div class="text-center">
+			<img class="card-img-top" src="~/images/@Model.product.Image" style="width:400px" />
+		</div>
+
+		<h1>
+			@Model.product.Name
+		</h1>
+
+		<p>
+			Description: @Model.product.Description
+		</p>
+
+		<p>
+			Price: @Model.product.Price
+		</p>
+
+		<div>
+			<a asp-page="/Products/UpdateProduct" asp-route-id="@Model.product.ProductID "class="btn btn-primary">Update Product Information</a>
+		</div>
+
+	</div>
+
+</div>

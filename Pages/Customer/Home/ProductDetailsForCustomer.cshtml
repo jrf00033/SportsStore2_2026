@@ -1,0 +1,41 @@
+﻿@page
+@model SportsStore2_2026.Pages.Customer.Home.ProductDetailsForCustomerModel
+@{
+}
+
+<div class="row justify-content-center">
+
+	<div class="card col-md-8 p-3">
+
+		<div class="text-center">
+			<img class="card-img-top" src="~/images/@Model.product.Image" style="width:400px" />
+		</div>
+
+		<h1>
+			@Model.product.Name
+		</h1>
+
+		<p>
+			Description: @Model.product.Description
+		</p>
+
+		<p>
+			Price: @Model.product.Price
+		</p>
+
+		<div class="card-footer">
+			<form method="post">
+
+				<input type="hidden" name="productID" value="@Model.product.ProductID"/> @*storing the productID*@
+
+				<input type="hidden" name="cartID" value="@User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier).Value"/> @*finding the cartID*@
+
+				<button type="submit" class="btn btn-primary">Add to Cart</button>
+
+			</form>
+			
+		</div>
+
+	</div>
+
+</div>
