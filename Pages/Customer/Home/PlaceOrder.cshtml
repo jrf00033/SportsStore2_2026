@@ -1,0 +1,55 @@
+﻿@page
+@model SportsStore2_2026.Pages.Customer.Home.PlaceOrderModel
+@{
+}
+
+<div class="row">
+
+	<!-- Left side: Customer info -->
+	<div class="col-md-6">
+
+		<form method="post">
+
+			<h3>Shipping Information</h3>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.Name" class="form-label"></label>
+				<input asp-for="OrderInput.Name" class="form-control" />
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.Address" class="form-label"></label>
+				<input asp-for="OrderInput.Address" class="form-control" />
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.City" class="form-label"></label>
+				<input asp-for="OrderInput.City" class="form-control" />
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.ZipCode" class="form-label"></label>
+				<input asp-for="OrderInput.ZipCode" class="form-control" />
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.State" class="form-label"></label>
+				<input asp-for="OrderInput.State" class="form-control" />
+			</div>
+
+			<div class="mb-3">
+				<label asp-for="OrderInput.CreditCardNumber" class="form-label"></label>
+				<input asp-for="OrderInput.CreditCardNumber" class="form-control" />
+			</div>
+
+			<button type="submit" class="btn btn-primary">Place Order</button>
+		</form>
+
+
+	</div>
+
+	<!-- Right side: Cart Items -->
+	<div class="col-md-6">
+	</div>
+
+</div>
